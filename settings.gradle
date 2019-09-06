@@ -1,0 +1,6 @@
+
+include ':shadow-host', ':shadow-plugin'
+
+includeBuild 'sdk/coding'
+includeBuild 'sdk/core'
+includeBuild 'sdk/dynamic'

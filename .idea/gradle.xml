@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/sdk/coding">
+                <projects>
+                  <project path="$PROJECT_DIR$/sdk/coding" />
+                  <project path="$PROJECT_DIR$/sdk/coding/checks" />
+                  <project path="$PROJECT_DIR$/sdk/coding/lint" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/sdk/core">
+                <projects>
+                  <project path="$PROJECT_DIR$/sdk/core" />
+                  <project path="$PROJECT_DIR$/sdk/core/common" />
+                  <project path="$PROJECT_DIR$/sdk/core/gradle-plugin" />
+                  <project path="$PROJECT_DIR$/sdk/core/jar-wrapper" />
+                  <project path="$PROJECT_DIR$/sdk/core/jar-wrapper/common-debug" />
+                  <project path="$PROJECT_DIR$/sdk/core/jar-wrapper/common-realse" />
+                  <project path="$PROJECT_DIR$/sdk/core/jar-wrapper/runtime-debug" />
+                  <project path="$PROJECT_DIR$/sdk/core/jar-wrapper/runtime-release" />
+                  <project path="$PROJECT_DIR$/sdk/core/load-parameters" />
+                  <project path="$PROJECT_DIR$/sdk/core/loader" />
+                  <project path="$PROJECT_DIR$/sdk/core/manager" />
+                  <project path="$PROJECT_DIR$/sdk/core/runtime" />
+                  <project path="$PROJECT_DIR$/sdk/core/transform" />
+                  <project path="$PROJECT_DIR$/sdk/core/transform-kit" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/sdk/dynamic">
+                <projects>
+                  <project path="$PROJECT_DIR$/sdk/dynamic" />
+                  <project path="$PROJECT_DIR$/sdk/dynamic/dynamic-host" />
+                  <project path="$PROJECT_DIR$/sdk/dynamic/dynamic-loader" />
+                  <project path="$PROJECT_DIR$/sdk/dynamic/dynamic-loader-impl" />
+                  <project path="$PROJECT_DIR$/sdk/dynamic/dynamic-manager" />
+                  <project path="$PROJECT_DIR$/sdk/dynamic/jar-wrapper" />
+                  <project path="$PROJECT_DIR$/sdk/dynamic/jar-wrapper/dynamic-host-debug" />
+                  <project path="$PROJECT_DIR$/sdk/dynamic/jar-wrapper/dynamic-host-realse" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/sdk/coding" />
+            <option value="$PROJECT_DIR$/sdk/coding/checks" />
+            <option value="$PROJECT_DIR$/sdk/coding/lint" />
+            <option value="$PROJECT_DIR$/sdk/core" />
+            <option value="$PROJECT_DIR$/sdk/core/common" />
+            <option value="$PROJECT_DIR$/sdk/core/gradle-plugin" />
+            <option value="$PROJECT_DIR$/sdk/core/jar-wrapper" />
+            <option value="$PROJECT_DIR$/sdk/core/jar-wrapper/common-debug" />
+            <option value="$PROJECT_DIR$/sdk/core/jar-wrapper/common-realse" />
+            <option value="$PROJECT_DIR$/sdk/core/jar-wrapper/runtime-debug" />
+            <option value="$PROJECT_DIR$/sdk/core/jar-wrapper/runtime-release" />
+            <option value="$PROJECT_DIR$/sdk/core/load-parameters" />
+            <option value="$PROJECT_DIR$/sdk/core/loader" />
+            <option value="$PROJECT_DIR$/sdk/core/manager" />
+            <option value="$PROJECT_DIR$/sdk/core/runtime" />
+            <option value="$PROJECT_DIR$/sdk/core/transform" />
+            <option value="$PROJECT_DIR$/sdk/core/transform-kit" />
+            <option value="$PROJECT_DIR$/sdk/dynamic" />
+            <option value="$PROJECT_DIR$/sdk/dynamic/dynamic-host" />
+            <option value="$PROJECT_DIR$/sdk/dynamic/dynamic-loader" />
+            <option value="$PROJECT_DIR$/sdk/dynamic/dynamic-loader-impl" />
+            <option value="$PROJECT_DIR$/sdk/dynamic/dynamic-manager" />
+            <option value="$PROJECT_DIR$/sdk/dynamic/jar-wrapper" />
+            <option value="$PROJECT_DIR$/sdk/dynamic/jar-wrapper/dynamic-host-debug" />
+            <option value="$PROJECT_DIR$/sdk/dynamic/jar-wrapper/dynamic-host-realse" />
+            <option value="$PROJECT_DIR$/shadow-host" />
+            <option value="$PROJECT_DIR$/shadow-plugin" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
