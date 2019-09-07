@@ -22,7 +22,7 @@ allprojects {
     }
     ext.ARTIFACT_VERSION = ext.VERSION_NAME + ext.VERSION_SUFFIX
     ext.TEST_HOST_APP_APPLICATION_ID = 'com.tencent.shadow.test.hostapp'
-    ext.SAMPLE_HOST_APP_APPLICATION_ID = 'com.tencent.shadow.sample.host'
+    ext.SAMPLE_HOST_APP_APPLICATION_ID = 'com.xuexiang.shadowtest'
     repositories {
         google()
         jcenter()

@@ -76,8 +76,12 @@
             <option value="$PROJECT_DIR$/sdk/dynamic/jar-wrapper" />
             <option value="$PROJECT_DIR$/sdk/dynamic/jar-wrapper/dynamic-host-debug" />
             <option value="$PROJECT_DIR$/sdk/dynamic/jar-wrapper/dynamic-host-realse" />
+            <option value="$PROJECT_DIR$/shadow-common" />
             <option value="$PROJECT_DIR$/shadow-host" />
+            <option value="$PROJECT_DIR$/shadow-loader" />
+            <option value="$PROJECT_DIR$/shadow-manager" />
             <option value="$PROJECT_DIR$/shadow-plugin" />
+            <option value="$PROJECT_DIR$/shadow-runtime" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

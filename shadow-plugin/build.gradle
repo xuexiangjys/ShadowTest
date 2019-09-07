@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.tencent.shadow.plugin'
 
 buildscript {
     repositories {
@@ -18,18 +17,38 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "com.xuexiang.shadowplugin"
+        applicationId project.SAMPLE_HOST_APP_APPLICATION_ID
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
 
+    signingConfigs {
+        release {
+            storeFile file("./debug.jks")
+            storePassword "123456"
+            keyAlias "debug"
+            keyPassword "123456"
+        }
+    }
+
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 
@@ -39,4 +58,57 @@ dependencies {
 
     implementation 'com.github.xuexiangjys:XQRCode:1.0.6'
 
+}
+
+apply plugin: 'com.tencent.shadow.plugin'
+
+shadow {
+    transform {
+//        useHostContext = ['abc']
+    }
+
+    packagePlugin {
+        pluginTypes {
+            debug {
+                loaderApkConfig = new Tuple2('shadow-loader-debug.apk', ':shadow-loader:assembleDebug')
+                runtimeApkConfig = new Tuple2('shadow-runtime-debug.apk', ':shadow-runtime:assembleDebug')
+                pluginApks {
+                    pluginApk1 {
+                        businessName = 'shadow-plugin'
+                        partKey = 'shadow-plugin'
+                        buildTask = ':shadow-plugin:assembleDebug'
+                        apkName = 'shadow-plugin-debug.apk'
+                        apkPath = 'shadow-plugin/build/outputs/apk/debug/shadow-plugin-debug.apk'
+                        hostWhiteList = ["com.xuexiang.shadowcommon"]
+                    }
+                }
+            }
+
+            release {
+                loaderApkConfig = new Tuple2('shadow-loader-release.apk', ':shadow-loader:assembleRelease')
+                runtimeApkConfig = new Tuple2('shadow-runtime-release.apk', ':shadow-runtime:assembleRelease')
+                pluginApks {
+                    pluginApk1 {
+                        businessName = 'shadow-plugin'
+                        partKey = 'shadow-plugin'
+                        buildTask = ':shadow-plugin:assembleRelease'
+                        apkName = 'shadow-plugin-release.apk'
+                        apkPath = 'shadow-plugin/build/outputs/apk/release/shadow-plugin-release.apk'
+                        hostWhiteList = ["com.xuexiang.shadowcommon"]
+                    }
+                }
+            }
+        }
+
+        loaderApkProjectPath = 'shadow-loader'
+        runtimeApkProjectPath = 'shadow-runtime'
+
+        archiveSuffix = System.getenv("PluginSuffix") ?: ""
+        archivePrefix = 'plugin'
+        destinationDir = "${getRootProject().getBuildDir()}"
+
+        version = 4
+        compactVersion = [1, 2, 3]
+        uuidNickName = "1.1.5"
+    }
 }

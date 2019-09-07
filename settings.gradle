@@ -1,5 +1,5 @@
 
-include ':shadow-host', ':shadow-plugin'
+include ':shadow-host', ':shadow-plugin', ':shadow-runtime', ':shadow-loader', ':shadow-manager', ':shadow-common'
 
 includeBuild 'sdk/coding'
 includeBuild 'sdk/core'
